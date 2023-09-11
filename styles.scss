@@ -1,17 +1,61 @@
-
+$activeLinkColor: #b22b2b;
+$textColor: #FFFFFF;
+$textActiveColor: #222222;
 $navBackground: #222222;
 $navActiveBackground: #FFFFFF;
 
 body{
     margin: 0;
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
 
     #navigation{
         nav{
             display: flex;
+            position: sticky;
             width: 100vw;
             height: 75px;
             background-color: $navBackground;
+
+            #nav-logo{
+                min-width: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    h1{
+                        letter-spacing: 2px;
+                        color: $textColor;
+                        font-size: 1.5em;
+                        margin: auto auto auto 20px;
+                        &:hover{
+                            color: $activeLinkColor;
+                        }
+                    }
+                }
+            }
+
+            #nav-links{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin-right: 20px;
+                a{
+                    font-size: 1.1rem;
+                    letter-spacing: 1px;
+                    font-weight: lighter;
+                    margin: auto 10px auto 10px;
+                    text-decoration: none;
+                    color: $textColor;
+
+                    &:hover{
+                        color: $activeLinkColor;
+                    }
+                }
+                
+            }
         }
         nav.active{
             height: 50px;
