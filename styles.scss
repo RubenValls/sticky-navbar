@@ -31,6 +31,11 @@ body{
                         margin: auto auto auto 20px;
                         &:hover{
                             color: $activeLinkColor;
+                            transition: 0.5s;
+                        }
+                        &:not(:hover){
+                            color: $textColor;
+                            transition: 0.5s;
                         }
                     }
                 }
@@ -49,9 +54,13 @@ body{
                     margin: auto 10px auto 10px;
                     text-decoration: none;
                     color: $textColor;
-
                     &:hover{
                         color: $activeLinkColor;
+                        transition: 0.5s;
+                    }
+                    &:not(:hover){
+                        color: $textColor;
+                        transition: 0.5s;
                     }
                 }
                 

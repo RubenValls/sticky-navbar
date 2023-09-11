@@ -27,6 +27,11 @@ body #navigation nav #nav-logo a h1 {
 }
 body #navigation nav #nav-logo a h1:hover {
   color: #b22b2b;
+  transition: 0.5s;
+}
+body #navigation nav #nav-logo a h1:not(:hover) {
+  color: #FFFFFF;
+  transition: 0.5s;
 }
 body #navigation nav #nav-links {
   width: 100%;
@@ -45,6 +50,11 @@ body #navigation nav #nav-links a {
 }
 body #navigation nav #nav-links a:hover {
   color: #b22b2b;
+  transition: 0.5s;
+}
+body #navigation nav #nav-links a:not(:hover) {
+  color: #FFFFFF;
+  transition: 0.5s;
 }
 body #navigation nav.active {
   height: 50px;
