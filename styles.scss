@@ -6,29 +6,31 @@ $navActiveBackground: #FFFFFF;
 
 body{
     margin: 0;
-    overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
 
     #navigation{
         nav{
+            position: fixed;
             display: flex;
-            position: sticky;
-            width: 100vw;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
             height: 75px;
             background-color: $navBackground;
 
             #nav-logo{
-                min-width: 200px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                min-width: 75px;
                 a{
                     text-decoration: none;
                     h1{
-                        letter-spacing: 2px;
+                        letter-spacing: -1px;
                         color: $textColor;
                         font-size: 1.5em;
-                        margin: auto auto auto 20px;
+                        margin: auto auto auto 30px;
                         &:hover{
                             color: $activeLinkColor;
                             transition: 0.5s;
@@ -42,13 +44,11 @@ body{
             }
 
             #nav-links{
-                width: 100%;
                 display: flex;
-                justify-content: flex-end;
                 align-items: flex-end;
-                margin-right: 20px;
+                justify-content: end;
+                padding-right: 20px;
                 a{
-                    font-size: 1.1rem;
                     letter-spacing: 1px;
                     font-weight: lighter;
                     margin: auto 10px auto 10px;
@@ -69,11 +69,40 @@ body{
         nav.active{
             height: 50px;
             background-color: $navActiveBackground;
+            #nav-logo{
+                a{
+                    h1{
+                        color: $textActiveColor;
+                        &:hover{
+                            color: $activeLinkColor;
+                            transition: 0.5s;
+                        }
+                        &:not(:hover){
+                            color: $textActiveColor;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            #nav-links{
+                a{
+                    color: $textActiveColor;
+                    &:hover{
+                        color: $activeLinkColor;
+                        transition: 0.5s;
+                    }
+                    &:not(:hover){
+                        color: $textActiveColor;
+                        transition: 0.5s;
+                    }
+                }
+                
+            }
         }
     }
 
     #hero-banner{
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-image: url('assets/hero-img.jpg');
         background-size: cover;
@@ -85,6 +114,7 @@ body{
             justify-content: center;
             align-items: center;
             margin: auto;
+            text-align: center;
             width: 100%;
             height: 100%;
             background-color: #22222250;
@@ -94,6 +124,7 @@ body{
                 color: $textColor;
                 text-shadow: 5px -5px 10px rgb(0, 0, 0);
                 letter-spacing: 2px;
+                max-width: 80%;
             }
 
             h3{
@@ -101,6 +132,36 @@ body{
                 color: $textColor;
                 text-shadow: 2px -2px 5px rgb(0, 0, 0);
                 letter-spacing: 2px;
+                max-width: 80%;
+            }
+        }
+    }
+
+    #information-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        flex-direction: column;
+        padding-bottom: 10px;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: auto;
+
+        .information{
+            width: 80%;
+            max-width: 1300px;
+            text-align: justify;
+            h1{
+                font-weight: light;
+            }
+            h3{
+                font-weight: lighter;
+                font-size: 0.98em;
+                letter-spacing: 1px;
+                word-spacing: 2px;
+                line-height: 25px;
+                color: $textActiveColor;
             }
         }
     }
