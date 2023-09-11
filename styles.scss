@@ -1,0 +1,21 @@
+
+$navBackground: #222222;
+$navActiveBackground: #FFFFFF;
+
+body{
+    margin: 0;
+    overflow: hidden;
+
+    #navigation{
+        nav{
+            display: flex;
+            width: 100vw;
+            height: 75px;
+            background-color: $navBackground;
+        }
+        nav.active{
+            height: 50px;
+            background-color: $navActiveBackground;
+        }
+    }
+}
